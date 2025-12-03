@@ -2,15 +2,15 @@
 // ==UserScript==
 // @name         Infoblox: Disable Dangerous CSV Import Options
 // @namespace    *
-// @version      1.0
+// @version      1.1
 // @description  Disables all the "delete all records not in imported file" radio buttons on the CSV Import page
 // @author       Julian Diehlmann, 4N IT-Solutions GmbH
 // @match        https://csp.infoblox.com/*
 // @match        https://csp.eu.infoblox.com/*
 // @run-at       document-end
 // @grant        none
-// @updateURL    none
-// @downloadURL  none
+// @updateURL    https://github.com/4N-JD/uddi-enhanced/raw/refs/heads/main/Disable_Dangerous_CSV_Import_Options.user.js
+// @downloadURL  https://github.com/4N-JD/uddi-enhanced/raw/refs/heads/main/Disable_Dangerous_CSV_Import_Options.user.js
 // @icon         https://www.infoblox.com/favicon.ico
 
 // ==/UserScript==
