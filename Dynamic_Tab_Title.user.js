@@ -2,11 +2,13 @@
 // ==UserScript==
 // @name         Infoblox Portal: Dynamic Tab Title
 // @namespace    *
-// @version      1.6
+// @version      1.7
 // @description  Dynamically update tab title based on Infoblox breadcrumbs
 // @author       You
 // @match        https://csp.infoblox.com/*
+// @match        https://portal.infoblox.com/*
 // @match        https://csp.eu.infoblox.com/*
+// @match        https://portal.eu.infoblox.com/*
 // @grant        none
 // @run-at       document-end
 // @updateURL    https://github.com/4N-JD/uddi-enhanced/raw/refs/heads/main/Dynamic_Tab_Title.user.js
