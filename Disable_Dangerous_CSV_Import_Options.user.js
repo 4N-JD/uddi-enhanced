@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         Infoblox: Disable Dangerous CSV Import Options
 // @namespace    *
-// @version      1.2
+// @version      1.3
 // @description  Disables all the "delete all records not in imported file" radio buttons on the CSV Import page
 // @author       Julian Diehlmann, 4N IT-Solutions GmbH
 // @match        https://csp.infoblox.com/*
@@ -42,7 +42,6 @@
 
                 const labelContent = radio.querySelector('.mat-radio-label-content');
                 if (labelContent) {
-                    // Finde den Text-Span und markiere ihn
                     const textSpan = labelContent.querySelector('span:nth-of-type(2)');
                     if (textSpan) {
                         textSpan.style.color = '#b30000';
@@ -50,16 +49,14 @@
                         textSpan.textContent = '⚠ ' + textSpan.textContent;
                     }
 
-                    // Button mit Infoblox-Style hinzufügen
                     const btn = document.createElement('button');
                     btn.textContent = 'I know what I\'m doing';
-                    btn.className = 'ib-c-positive-action-btn'; // Infoblox-Style
-                    btn.style.marginLeft = '10px'; // Nur minimaler Abstand
-                    btn.title = 'Diese Option ist extrem gefährlich – sie löscht alle Datensätze, die NICHT in der Importdatei enthalten sind.';
+                    btn.className = 'ib-c-positive-action-btn'; 
+                    btn.style.marginLeft = '10px'; 
+                    btn.title = 'This option is extremely dangerous, be aware everything that\'s not in the import file will be deleted!';
                     btn.addEventListener('click', () => {
                         if (input) input.disabled = false;
                         btn.remove();
-                        console.warn('Gefährliche Option aktiviert:', text);
                     });
                     labelContent.appendChild(btn);
                 }
@@ -74,5 +71,3 @@
 
     processOptions();
 })();
-
-// test update
