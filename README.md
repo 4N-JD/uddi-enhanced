@@ -29,3 +29,9 @@ Clicking the "I know what I'm doing"-button to the right will enable the radio b
 
 [Install Disable Dangerous CSV Import Options](https://github.com/4N-JD/uddi-enhanced/raw/refs/heads/main/Disable_Dangerous_CSV_Import_Options.user.js)
 
+### Copy contents to clipboard
+Add buttons to table cells that put the value into the clipboard
+
+<img width="1243" height="363" alt="grafik" src="https://github.com/user-attachments/assets/6c8b8128-822e-4a7f-9f2a-3f0d2ebddcdf" />
+
+[Install Copy to Clipboard](https://github.com/4N-JD/uddi-enhanced/raw/refs/heads/main/Copy_To_Clipboard.user.js)
