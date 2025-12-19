@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         Infoblox Portal: Copy Button in Table Cells
 // @namespace    *
-// @version      1.0
+// @version      1.1
 // @description  Add a copy button to table cells
 // @author       Julian Diehlmann, 4N IT-Solutions GmbH
 // @match        https://csp.infoblox.com/*
@@ -23,7 +23,7 @@
   var DEBUG = false;
   var LOG_PREFIX = '[4n-copy]';
   var BTN_CLASS = '_4n_copy_btn';
-
+  var DS_FLAG = 'copyBtnBound';
   var EXCLUDE_CLASSES = [
     'ib-navigation-header-title',
     'ib-sub-item-title',
@@ -157,7 +157,6 @@
 
     var cls = (el.className || '').toString();
     if (cls.indexOf('ib-next-table-cell') !== -1) return true;
-    if (cls.indexOf('ib-c-text-overflow') !== -1) return true;
     if (cls.indexOf('ib-long-short-cell-container') !== -1) return true;
 
     return false;
@@ -191,7 +190,7 @@
     try { if (el.querySelector('.' + BTN_CLASS)) return; } catch (e) {}
 
     var textContainer = null;
-    try { textContainer = el.querySelector('.ib-c-text-overflow'); } catch (e1) {}
+
     if (!textContainer) { try { textContainer = el.querySelector('.ib-long-short-cell-container'); } catch (e2) {} }
     if (!textContainer) textContainer = el;
 
@@ -205,11 +204,13 @@
     if (!hasCopyableText(textContainer)) return;
 
     var btn = createCopyButton(textContainer);
+
     try { textContainer.appendChild(btn); } catch (e5) { warn('Append failed:', e5); }
+
   }
 
   // ---------------- Scan & Observe ----------------
-  var SELECTOR = 'td,th,.ib-next-table-cell,.ib-c-text-overflow,.ib-long-short-cell-container';
+  var SELECTOR = '.ib-next-table-cell';
 
   function scanExisting(origin) {
     var nodes = [];
