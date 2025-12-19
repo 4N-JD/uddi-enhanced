@@ -10,7 +10,7 @@ A collection of [Tampermonkey](https://www.tampermonkey.net) Userscripts to impr
 4. Hit "install"
 <img width="1203" height="317" alt="grafik" src="https://github.com/user-attachments/assets/ecab2724-1365-4e73-bbcd-4977943e7535" />
 
-## Userscripts
+# Userscripts
 
 ### Dynamic Tab Title
 Replaces the default "Infoblox Portal" text in the browser tab with something related to the current open page in that tab.
@@ -35,3 +35,11 @@ Add buttons to table cells that put the value into the clipboard
 <img width="1243" height="363" alt="grafik" src="https://github.com/user-attachments/assets/6c8b8128-822e-4a7f-9f2a-3f0d2ebddcdf" />
 
 [Install Copy to Clipboard](https://github.com/4N-JD/uddi-enhanced/raw/refs/heads/main/Copy_To_Clipboard.user.js)
+
+### CIDR Info Button
+Add a button next to CIDR entries to view detailled information about the subnet.  
+Each entry of the info frame can be clicked to copy the value into the clipboard.
+
+<img width="853" height="607" alt="grafik" src="https://github.com/user-attachments/assets/e95ff0a8-42cd-49e5-bf1e-542db6259fe6" />
+
+[Install CIDR Info Button](https://github.com/4N-JD/uddi-enhanced/raw/refs/heads/main/CIDR_Info.user.js)
