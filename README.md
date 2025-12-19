@@ -40,6 +40,7 @@ Add buttons to table cells that put the value into the clipboard
 Add a button next to CIDR entries to view detailled information about the subnet.  
 Each entry of the info frame can be clicked to copy the value into the clipboard.
 
+<img width="849" height="431" alt="grafik" src="https://github.com/user-attachments/assets/ab7df670-8a37-494f-a1cb-84efaf8833f0" />
 <img width="853" height="607" alt="grafik" src="https://github.com/user-attachments/assets/e95ff0a8-42cd-49e5-bf1e-542db6259fe6" />
 
 [Install CIDR Info Button](https://github.com/4N-JD/uddi-enhanced/raw/refs/heads/main/CIDR_Info.user.js)
